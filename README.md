@@ -1,14 +1,9 @@
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=750&lines=🏙️+NYC+Airbnb+Room+Predictor;End-to-End+Machine+Learning+Project;Designed+%7C+Engineered+%7C+Deployed;by+Abhishek+Grover" alt="Typing animation" />
+</div>
 
-# NYC Airbnb Room Type Predictor
 
-### Production-ready Machine Learning Web Application
 
-Predict the most probable Airbnb room type from listing information using a trained Machine Learning pipeline served through FastAPI.
-
-Designed, engineered and deployed by **Abhishek Grover**
-
----
 
 <div align="center">
 
@@ -29,17 +24,24 @@ Designed, engineered and deployed by **Abhishek Grover**
 
 ---
 
-# Overview
+## Table of Contents
 
-This project is a complete end-to-end Machine Learning application built to predict the room type of Airbnb listings in New York City.
+- [Overview](#overview)
+- [Project Architecture](#project-architecture)
+- [Implementation Workflow](#implementation-workflow)
+- [1. Data Exploration](#1-data-exploration)
+- [2. Feature Engineering](#2-feature-engineering)
+- [3. Model Training](#3-model-training)
+- [4. Model Serialization](#4-model-serialization)
+- [5. Backend Development](#5-backend-development)
+- [6. Frontend Development](#6-frontend-development)
+- [7. Deployment](#7-deployment)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Why This Project](#why-this-project)
+- [Built By](#built-by)
 
-Instead of stopping at model training inside a Jupyter Notebook, this project was engineered as a deployable web application with a production-style inference pipeline.
-
-The workflow covers everything from data preprocessing and feature engineering to API development, frontend integration and cloud deployment.
-
----
-
-# Project Architecture
+# Project Architecture ✅
 
 ```
 
@@ -101,9 +103,9 @@ Render Deployment
 
 ---
 
-# Implementation Workflow
+# Implementation Workflow ✅
 
-## 1. Data Exploration
+### 1. Data Exploration
 
 - Dataset inspection
 - Missing value analysis
@@ -120,7 +122,7 @@ Libraries used
 
 ---
 
-## 2. Feature Engineering
+### 2. Feature Engineering
 
 The dataset was cleaned and transformed before model training.
 
@@ -133,7 +135,7 @@ Typical preprocessing included
 
 ---
 
-## 3. Model Training
+### 3. Model Training
 
 A complete Scikit-Learn pipeline was trained and exported using Joblib so that exactly the same preprocessing logic is applied during inference.
 
@@ -141,7 +143,7 @@ This avoids training-serving inconsistencies.
 
 ---
 
-## 4. Model Serialization
+### 4. Model Serialization
 
 The trained pipeline was exported as
 
@@ -153,7 +155,7 @@ which is loaded directly inside the FastAPI backend.
 
 ---
 
-## 5. Backend Development
+### 5. Backend Development
 
 The prediction service was developed using **FastAPI**.
 
@@ -176,7 +178,7 @@ POST /predict
 
 ---
 
-## 6. Frontend Development
+### 6. Frontend Development
 
 A lightweight frontend was developed using
 
@@ -190,7 +192,7 @@ This transforms the trained model into an interactive web application rather tha
 
 ---
 
-## 7. Deployment
+### 7. Deployment
 
 The application was deployed using **Render**, making the trained model accessible through a hosted API.
 
@@ -203,7 +205,7 @@ Deployment involved
 
 ---
 
-# Tech Stack
+# Tech Stack ✅
 
 | Category | Technologies |
 |-----------|-------------|
@@ -219,7 +221,7 @@ Deployment involved
 
 ---
 
-# Project Structure
+# Project Structure ✅
 
 ```
 NYC-Airbnb-Room_Type-Predictor
@@ -246,7 +248,7 @@ NYC-Airbnb-Room_Type-Predictor
 
 ---
 
-# Why This Project
+# Why This Project ✅
 
 This repository demonstrates more than model training.
 
@@ -264,9 +266,9 @@ The objective was to build a project that resembles how Machine Learning models 
 
 ---
 
-# Built By
+### Built By
 
-## 👨‍💻 Abhishek Grover
+### Abhishek Grover ✅
 
 Machine Learning • AI Engineering • Data Science
 
