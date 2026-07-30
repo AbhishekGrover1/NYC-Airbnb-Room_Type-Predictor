@@ -266,8 +266,9 @@ The objective was to build a project that resembles how Machine Learning models 
 
 Machine Learning • AI Engineering • Data Science
 
-LinkedIn
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1.6K%20Followers-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-grover07/)
+[![Open to Internship](https://img.shields.io/badge/Open_to-Internship-success)](mailto:ss107456@gmail.com)
 
-> https://www.linkedin.com/in/abhishek-grover07
+---
 
 ---
