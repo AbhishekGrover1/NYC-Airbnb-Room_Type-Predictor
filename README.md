@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🟣 NYC Airbnb Room Type Predictor
+# NYC Airbnb Room Type Predictor
 
 ### Production-ready Machine Learning Web Application
 
