@@ -2,9 +2,6 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=750&lines=🏙️+NYC+Airbnb+Room+Predictor;End-to-End+Machine+Learning+Project;Designed+%7C+Engineered+%7C+Deployed;by+Abhishek+Grover" alt="Typing animation" />
 </div>
 
-
-
-
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -24,109 +21,87 @@
 
 ---
 
-## Table of Contents
-
+## Table of Contents ୨ৎ
+ 
 - [Overview](#overview)
 - [Project Architecture](#project-architecture)
 - [Implementation Workflow](#implementation-workflow)
-- [1. Data Exploration](#1-data-exploration)
-- [2. Feature Engineering](#2-feature-engineering)
-- [3. Model Training](#3-model-training)
-- [4. Model Serialization](#4-model-serialization)
-- [5. Backend Development](#5-backend-development)
-- [6. Frontend Development](#6-frontend-development)
-- [7. Deployment](#7-deployment)
+  - [Step 1: Data Exploration](#step-1-data-exploration)
+  - [Step 2: Feature Engineering](#step-2-feature-engineering)
+  - [Step 3: Model Training](#step-3-model-training)
+  - [Step 4: Model Serialization](#step-4-model-serialization)
+  - [Step 5: Backend Development](#step-5-backend-development)
+  - [Step 6: Frontend Development](#step-6-frontend-development)
+  - [Step 7: Deployment](#step-7-deployment)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Why This Project](#why-this-project)
 - [Built By](#built-by)
+---
 
-# Project Architecture ✅
+---
 
-```
+## Overview ୨ৎ
 
-Raw Dataset
-│
-▼
+An end-to-end Machine Learning project that predicts Airbnb room types across New York City. It spans the full ML lifecycle — from data exploration and feature engineering through model training, serialization, API development, and cloud deployment — resulting in a fully interactive web application rather than a standalone notebook.
 
-Exploratory Data Analysis
+---
 
-│
+## Project Architecture ୨ৎ
 
-▼
+The system follows a linear pipeline, organized into five logical layers that carry the data from raw input to a deployed, user-facing application:
 
-Feature Engineering
+```mermaid
+flowchart TD
+    subgraph L1["Data Layer"]
+        A[Raw Dataset] --> B[Exploratory Data Analysis]
+        B --> C[Feature Engineering]
+        C --> D[Data Preprocessing Pipeline]
+    end
 
-│
+    subgraph L2["Model Layer"]
+        D --> E[Machine Learning Model]
+        E --> F["Model Serialization (Joblib)"]
+    end
 
-▼
+    subgraph L3["Service Layer"]
+        F --> G[FastAPI Backend]
+        G --> H[REST API]
+    end
 
-Data Preprocessing Pipeline
+    subgraph L4["Presentation Layer"]
+        H --> I["HTML • CSS • JavaScript UI"]
+    end
 
-│
-
-▼
-
-Machine Learning Model
-
-│
-
-▼
-
-Model Serialization (Joblib)
-
-│
-
-▼
-
-FastAPI Backend
-
-│
-
-▼
-
-REST API
-
-│
-
-▼
-
-HTML • CSS • JavaScript UI
-
-│
-
-▼
-
-Render Deployment
-
+    subgraph L5["Deployment Layer"]
+        I --> J[Render Deployment]
+    end
 ```
 
 ---
 
-# Implementation Workflow ✅
+## Implementation Workflow ୨ৎ
 
-### 1. Data Exploration
+Each stage below documents the engineering behind the pipeline shown above, from raw data to a live deployment.
 
+### Step 1: Data Exploration
+
+The raw dataset was examined to understand its structure, quality, and underlying patterns.
+
+**Key activities:**
 - Dataset inspection
 - Missing value analysis
-- Feature distribution
+- Feature distribution analysis
 - Correlation analysis
-- Outlier investigation
+- Outlier detection
 
-Libraries used
-
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+**Libraries used:** Pandas, NumPy, Matplotlib, Seaborn
 
 ---
 
-### 2. Feature Engineering
+### Step 2: Feature Engineering 
 
-The dataset was cleaned and transformed before model training.
-
-Typical preprocessing included
+The dataset was cleaned and transformed ahead of model training. Preprocessing included:
 
 - Handling missing values
 - Encoding categorical variables
@@ -135,31 +110,27 @@ Typical preprocessing included
 
 ---
 
-### 3. Model Training
+### Step 3: Model Training 
 
-A complete Scikit-Learn pipeline was trained and exported using Joblib so that exactly the same preprocessing logic is applied during inference.
-
-This avoids training-serving inconsistencies.
+A complete Scikit-Learn pipeline was trained and exported using Joblib, ensuring that the exact same preprocessing logic is applied at inference time. This eliminates training-serving inconsistencies.
 
 ---
 
-### 4. Model Serialization
+### Step 4: Model Serialization 
 
-The trained pipeline was exported as
+The trained pipeline was exported as:
 
 ```
 Model_Pipeline.pkl
 ```
 
-which is loaded directly inside the FastAPI backend.
+This file is loaded directly by the FastAPI backend.
 
 ---
 
-### 5. Backend Development
+### Step 5: Backend Development 
 
-The prediction service was developed using **FastAPI**.
-
-Features include
+The prediction service was built using **FastAPI**, with the following features:
 
 - REST API
 - Input validation using Pydantic
@@ -168,44 +139,39 @@ Features include
 - CORS support
 - Clean endpoint architecture
 
-Available endpoints
+**Available endpoints:**
 
 ```
 GET /
-
 POST /predict
 ```
 
 ---
 
-### 6. Frontend Development
+### Step 6: Frontend Development 
 
-A lightweight frontend was developed using
+A lightweight frontend was built using:
 
 - HTML
 - CSS
 - JavaScript
 
-The frontend collects user input, sends requests to the FastAPI API and displays prediction results.
-
-This transforms the trained model into an interactive web application rather than a notebook demonstration.
+It collects user input, sends requests to the FastAPI backend, and displays the prediction results — turning the trained model into an interactive web application rather than a notebook demonstration.
 
 ---
 
-### 7. Deployment
+### Step 7: Deployment 
 
-The application was deployed using **Render**, making the trained model accessible through a hosted API.
+The application was deployed on **Render**, making the trained model accessible through a hosted API. This involved:
 
-Deployment involved
-
-- dependency management
-- runtime configuration
-- model loading
+- Dependency management
+- Runtime configuration
+- Model loading
 - API hosting
 
 ---
 
-# Tech Stack ✅
+## Tech Stack 
 
 | Category | Technologies |
 |-----------|-------------|
@@ -221,60 +187,44 @@ Deployment involved
 
 ---
 
-# Project Structure ✅
+## Project Structure 
 
 ```
 NYC-Airbnb-Room_Type-Predictor
-
 │
-
 ├── main.py
-
 ├── Model_Pipeline.pkl
-
 ├── index.html
-
 ├── style.css
-
 ├── script.js
-
 ├── requirements.txt
-
 ├── runtime.txt
-
 └── nyc_airbnb_room_type_classification.ipynb
-
 ```
 
 ---
 
-# Why This Project ✅
+## Why This Project 
 
-This repository demonstrates more than model training.
+This repository goes beyond model training to demonstrate a complete, end-to-end Machine Learning workflow, including:
 
-It reflects an end-to-end Machine Learning workflow including
-
-- data preparation
-- feature engineering
-- preprocessing pipeline
-- model persistence
+- Data preparation
+- Feature engineering
+- Preprocessing pipeline design
+- Model persistence
 - API development
-- frontend integration
-- cloud deployment
+- Frontend integration
+- Cloud deployment
 
-The objective was to build a project that resembles how Machine Learning models are packaged and served beyond notebook experimentation.
+The goal was to build a project that mirrors how Machine Learning models are actually packaged and served in production — not just how they're prototyped in a notebook.
 
 ---
 
-### Built By
+## Built By ୨ৎ
 
-### Abhishek Grover ✅
+**Abhishek Grover**
 
 Machine Learning • AI Engineering • Data Science
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-1.6K%20Followers-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhishek-grover07/)
 [![Open to Internship](https://img.shields.io/badge/Open_to-Internship-success)](mailto:ss107456@gmail.com)
-
----
-
----
