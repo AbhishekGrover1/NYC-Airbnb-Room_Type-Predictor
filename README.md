@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=3000&pause=1000&color=8A2BE2&center=true&vCenter=true&width=750&lines=🏙️+NYC+Airbnb+Room+Predictor;End-to-End+Machine+Learning+Project;Designed+%7C+Engineered+%7C+Deployed;by+Abhishek+Grover" alt="Typing animation" />
 </div> 
- 
+  
 <div align="center"> 
     
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
